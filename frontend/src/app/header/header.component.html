@@ -1,0 +1,111 @@
+
+<!--
+<mat-toolbar color="primary">
+  <span><img src="/assets/images/logo.png" height=30 width=auto></span>
+  <div class="navigate">
+    <form id="container" class="searchbox">
+      <a mat-button><span class="fa fa-search"></span><input type="text" placeholder="Search.." [formControl]="activity"  [matAutocomplete]="auto"></a>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </form>
+    <a mat-button><span class="fa fa-info fa-lg"></span> About</a>
+    <a mat-button><span class="fa fa-address-card fa-lg"></span> Contact</a>
+  </div>
+  <span class="flex-spacer"></span>
+  <a mat-button><span class="fa fa-sign-in">Login</span></a>
+</mat-toolbar>
+-->
+
+
+<!--
+<mat-toolbar color="primary">
+    
+  <mat-toolbar-row>
+    <div fxLayout="row">
+      <button mat-button>
+        <span><img src="/assets/images/logo.png" alt="Logo" height=40 width=150px></span>
+        </button>
+      <form>
+            <a mat-button><mat-icon>search</mat-icon>
+            <input type="text" placeholder="Search.." [formControl]="activity"  [matAutocomplete]="auto" style="max-width: 200px; height: 25px;"></a>
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+              </mat-option>
+            </mat-autocomplete>
+    
+         
+          <button style="font-size:larger" mat-button [matMenuTriggerFor]="SubMenu">Subjects<mat-icon>list</mat-icon></button>
+          <mat-menu #SubMenu="matMenu">
+            <button mat-menu-item>Biology</button>
+            <button mat-menu-item>Chemistry</button>
+          </mat-menu> 
+          <button style="font-size:larger" mat-button [matMenuTriggerFor]="Menu">Language<mat-icon>g_translate</mat-icon></button>
+          <mat-menu #Menu="matMenu">
+            <mat-option *ngFor="let ver of version" [routerLink]="['/hindi', ver]">{{ver}}</mat-option> 
+          </mat-menu> 
+         
+      </form>
+    </div>
+    
+  </mat-toolbar-row>
+</mat-toolbar>
+-->
+
+<mat-toolbar color="primary" fxLayout.lt-md="row" >
+   
+  <div fxFlex fxFlex.gt-xs="50%">
+    <span><img fxFlex.lt-sm="80px"  src="/assets/images/logo.png" alt="Logo" height=35 width=120px></span>
+
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.lt-md>
+      <div fxLayout fxLayoutGap="15px" class="navigation-items">
+        <div>
+          <a style="font-size:larger" mat-button routerLink="/home">home <mat-icon>home</mat-icon></a>
+           
+        </div>
+        <div>
+          <a style="font-size:larger" mat-button routerLink="/contact">Contact <mat-icon>call</mat-icon></a>
+           
+        </div>
+        <div>
+          <a style="font-size:larger" mat-button routerLink="/ureg">SignUp</a>
+           
+        </div>
+        
+        <div>
+          <a style="font-size:larger" mat-button routerLink="/login">Login<mat-icon>login</mat-icon></a>
+           
+        </div>
+  
+        </div>
+    </div>
+  </div>  
+
+
+    <div fxFlex fxFlex.gt-xs="40%" fxLayoutAlign.gt-xs="end">
+
+    </div>
+  
+
+
+
+</mat-toolbar>
+
+
+<div class="container"
+  fxLayout="row"
+  fxLayout.sm="column" 
+  fxLayout.xs="column" 
+  fxLayoutAlign.xs="start"
+  
+  fxLayoutAlign.gt-sm="center center" >
+
+<div class="md-card-image" fxFlex fxFlex.gt-md="100%" fxFlex.lt-sm="100%" >
+  <img src="/assets/images/banner.jpg"  alt="Logo" style="max-width: 1470px; align-items: center;">
+  <p style="font-size: 20px;"></p>
+</div>
+
+</div>

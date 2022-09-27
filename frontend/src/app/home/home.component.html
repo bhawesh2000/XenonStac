@@ -1,0 +1,12 @@
+<div class="container" fxLayoutAlign="center center">
+    <div  *ngIf="subject" fxLayout="row-reverse" fxLayout.lt-sm="column-reverse" fxLayoutGap="10px">
+            <mat-card fxFlex="25%" fxFlex.sm="33%" fxFlex.xs="100%"   *ngFor="let sub of subject" style="background-color: #7f5bd1;">
+                <img mat-card-image src="{{sub.image}}" alt="{{sub.name}}">
+                <mat-card-footer>
+          <a style="font-size:larger" mat-button routerLink="/buy">BUY NOW <mat-icon>shopping_cart</mat-icon></a>
+                    
+                </mat-card-footer>
+            </mat-card>
+    </div>
+</div>
+
